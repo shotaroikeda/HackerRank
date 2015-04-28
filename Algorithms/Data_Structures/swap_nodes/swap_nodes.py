@@ -37,3 +37,14 @@ class binarytree(object):
     def inorder_traversal(self):
         if self.left == -1:
             sys.stdout.write(self.value + " ")
+            return 0
+        else:
+            self.left.inorder_traversal()
+
+        if not self.right == -1:
+            sys.stdout.write(self.value + " ")
+            self.right.inorder_traversal()
+            return 0
+        else:
+            sys.stdout.write(self.value + " ")
+            return 0
